@@ -2,9 +2,9 @@
 
 # Članovi
 
-Dario Barać
-Anđelo Ferenčić
+	1. Dario Barać
+	2. Anđelo Ferenčić
 
 # Tema
 
-Git submoduli
+	Git submoduli
