@@ -9,7 +9,9 @@
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
 \usepackage{xspace}
+\graphicspath{ {slike/} }
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\usepackage{times}
 
 \title{Git submoduli}
 \subtitle{mogućnost korištenja repozitorija unutar repozitorija}
@@ -26,10 +28,65 @@
 %\end{frame}
 
 \section{Uvod}
+\begin{frame}{Uvod u git submodule}
+\begin{itemize}
+	\item Ako razvijamo projekt unutar kojeg se nalazi drugi projekt (npr. Bootstrap library unutar repozitorija web sjedišta) može doći do problema sa praćenjem njihovih verzija.
+	\item Git taj problem riješava sa submodulima koji nam omogućuju njihovo neovisno verzioniranje.
+\end{itemize}	
+\end{frame}
 
+\begin{frame}[fragile]{Početak rada sa submodulima}
+ 	U repozitoriju našeg web sjedišta ćemo inicijalizirati git submodul za Bootstrap library koristeći naredbu: \begin{semiverbatim}$submodule add. \end{semiverbatim}
+ 	Submodul će biti spremljen u poddirektorij projekta i imat će isti naziv kao originalni repozitorij kojeg uključujemo.
 
-\begin{frame}
+	\includegraphics[scale=0.35]{submoduli_pocetak}
+\end{frame}
 
+\begin{frame}[fragile]{Početak rada sa submodulima}
+	Naredba \begin{semiverbatim}$git status \end{semiverbatim} nam javlja daje stvorena .submodule datoteka koja sadrži imena i url adrese svih submodula. 
+
+	\includegraphics[scale=0.45]{submoduli_status}
+
+	Možemo primjetiti i da git ne prati \emph{bootstrap}-ove datoteke jer zna da je to podrepozitorij.
+\end{frame}
+
+\begin{frame}{Početak rada sa submodulima}
+	I kada napravimo \emph{commit} git prati podrepozitorije kao samo jednu datoteku.
+
+	\includegraphics[scale=0.42]{sub_commit}
+
+\end{frame}
+
+\begin{frame}{Kloniranje submodulima}
+	
+\end{frame}
+
+\begin{frame}{}
+\begin{itemize}
+	\item 
+	\item 
+\end{itemize}	
+\end{frame}
+
+\begin{frame}{}
+\begin{itemize}
+	\item 
+	\item 
+\end{itemize}	
+\end{frame}
+
+\begin{frame}{}
+\begin{itemize}
+	\item 
+	\item 
+\end{itemize}	
+\end{frame}
+
+\begin{frame}{}
+\begin{itemize}
+	\item 
+	\item 
+\end{itemize}	
 \end{frame}
 
 
