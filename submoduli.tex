@@ -120,6 +120,8 @@
     
     Dodavanjem \begin{semiverbatim}---merge\end{semiverbatim} na korišteni git update poziv spojit ćemo promjenu koja je na serveru za ovaj submodul sa našom granom.
     \begin{semiverbatim}$git submodule update ---remote ---merge \end{semiverbatim}
+
+    \includegraphics[scale=0.4]{sub_merge}
 \end{frame}
 
 \begin{frame}[fragile]{Rad na submodulima}
@@ -141,12 +143,16 @@
     \begin{semiverbatim}git push\end{semiverbatim}
     nadodamo argument \begin{semiverbatim}---recurse-submodules\end{semiverbatim}
     koji može biti "check" ili "on-demand".
+    
+    \includegraphics[scale=0.4]{sub_check}
 \end{frame}
 
 \begin{frame}[fragile]{Objavljivanje promjena na submodulima}
     
     "check" opcija samo javi da promjene na submodulu nisu pushane te zaustavi push.
     "on-demand" opcija pokuša pushati promjene na submodulima i nakon toga glavni projekt.
+
+    \includegraphics[scale=0.4]{sub_ondemand}
     
 \end{frame}
 
@@ -162,7 +168,7 @@
     Ako imamo više submodula u istom projektu naredba foreach olakšava stvari.
 	Npr. ako izradimo novu granu i želimo se prebaciti na nju na svim submodulima.
 	
-    
+    \includegraphics[scale=0.4]{sub_foreach}
 \end{frame}
 
 \begin{frame}[fragile]{Problemi sa submodulima}
