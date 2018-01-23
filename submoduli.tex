@@ -99,11 +99,9 @@
 \end{frame}
 
 \begin{frame}[fragile]{Rad na submodulima}
-    Koristeći naredbu 
-    
-    \begin{semiverbatim}\$git submodule update \end{semiverbatim}
-    
-    Git pribavlja promjene i ažurira datoteke u poddirektoriju, no nijedna grana ne prati promjene u podrepozitoriju
+    Koristeći naredbu  
+    \begin{semiverbatim}$git submodule update \end{semiverbatim}   
+    Git pribavlja promjene i ažurira datoteke u poddirektoriju, no nijedna grana ne prati naše promjene u podrepozitoriju.
     
 \end{frame}
 
@@ -111,23 +109,23 @@
     
     Da bismo riješili taj problem moramo napraviti dvije stvari:
     \begin{itemize}
-    \item Ući u svaki submodul i "checkout"-at granu na kojoj ćemo raditi.
+    \item Ući u svaki submodul i "\emph{checkout}"-at granu na kojoj ćemo raditi.
     \item Konfigurirati što će Git napraviti ako smo napravili promjenu te onda naredbom
-     \begin{semiverbatim}\$git submodule update --remote \end{semiverbatim}
-    pullamo novi posao
+     \begin{semiverbatim}$git submodule update ---remote \end{semiverbatim}
+    pullamo nove promjene.
     \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Rad na submodulima}
     
-    Dodavanjem \begin{semiverbatim}--merge\end{semiverbatim} na korišteni \begin{semiverbatim}\$git update\end{semiverbatim} poziv spojit ćemo promjenu koja je na serveru za ovaj submodul sa našom granom
-    
+    Dodavanjem \begin{semiverbatim}---merge\end{semiverbatim} na korišteni git update poziv spojit ćemo promjenu koja je na serveru za ovaj submodul sa našom granom.
+    \begin{semiverbatim}$git submodule update ---remote ---merge \end{semiverbatim}
 \end{frame}
 
 \begin{frame}[fragile]{Rad na submodulima}
     Dodavanjem
-    \begin{semiverbatim}--rebase\end{semiverbatim}
-    spojit ćemo promjenu našu lokalnu promjenu sa serverom
+    \begin{semiverbatim}---rebase\end{semiverbatim}
+    spojit ćemo promjenu našu lokalnu promjenu sa serverom.
 \end{frame}
 
 \begin{frame}[fragile]{Objavljivanje promjena na submodulima}
@@ -141,14 +139,14 @@
     
     Da bismo ovaj problem riješili na naredbu
     \begin{semiverbatim}git push\end{semiverbatim}
-    nadodamo argument \begin{semiverbatim}--recurse-submodules\end{semiverbatim}
-    koji može biti "check" ili "on-demand"
+    nadodamo argument \begin{semiverbatim}---recurse-submodules\end{semiverbatim}
+    koji može biti "check" ili "on-demand".
 \end{frame}
 
 \begin{frame}[fragile]{Objavljivanje promjena na submodulima}
     
-    "check" opcija samo javi da promjene na submodulu nisu pushane te zaustavi push
-    "on-demand" opcija pokuša pushati promjene na submodulima i nakon toga glavni projekt
+    "check" opcija samo javi da promjene na submodulu nisu pushane te zaustavi push.
+    "on-demand" opcija pokuša pushati promjene na submodulima i nakon toga glavni projekt.
     
 \end{frame}
 
@@ -159,16 +157,10 @@
     
 \end{frame}
 
-\begin{frame}[fragile]{Spajanje promjena submodula}
-    
-    
-    
-\end{frame}
-
 \begin{frame}[fragile]{Foreach naredba}
     
-    Ako imamo više submodula u istom projektu naredba foreach olakšava stvari
-	Npr. ako izradimo novu granu i želimo se prebaciti na nju na svim submodulima
+    Ako imamo više submodula u istom projektu naredba foreach olakšava stvari.
+	Npr. ako izradimo novu granu i želimo se prebaciti na nju na svim submodulima.
 	
     
 \end{frame}
@@ -176,7 +168,7 @@
 \begin{frame}[fragile]{Problemi sa submodulima}
     
     Grananje sa submodulima može biti problematično.
-    Ako napravimo novu granu, dodamo submodul na tu granu i vratimo se na granu bez tog submodula još uvijek imamo direktorij submodula kao nepraćeni direktorij
+    Ako napravimo novu granu, dodamo submodul na tu granu i vratimo se na granu bez tog submodula još uvijek imamo direktorij submodula kao nepraćeni direktorij.
     
 \end{frame}
 
@@ -184,14 +176,14 @@
     
     Ako izbrišemo taj direktorij, nakon što se ponovo vratimo na granu sa submodulom moramo pozvati naredbu
     \begin{semiverbatim}git submodule update --init\end{semiverbatim}
-    da bi ponovo je popunili
+    da bi ponovo je popunili.
     
 \end{frame}
 
 \begin{frame}[fragile]{Problemi sa submodulima}
     
     Mijenjanje iz poddirektorija u submodule je također jedan od čestih problema.
-    Mora se unstageat poddiretorij i tek onda se može dodati submodul
+    Mora se unstageat poddiretorij i tek onda se može dodati submodul.
     
 \end{frame}
 
