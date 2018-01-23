@@ -176,17 +176,20 @@
     Grananje sa submodulima može biti problematično.
     Ako napravimo novu granu, dodamo submodul na tu granu i vratimo se na granu bez tog submodula još uvijek imamo direktorij submodula kao nepraćeni direktorij.
     
+    \includegraphics[scale=0.3]{sub_removing_sub1}
 \end{frame}
 
 \begin{frame}[fragile]{Problemi sa submodulima}
+    \includegraphics[scale=0.34]{sub_removing_sub2}
     
     Ako izbrišemo taj direktorij, nakon što se ponovo vratimo na granu sa submodulom moramo pozvati naredbu
     \begin{semiverbatim}git submodule update --init\end{semiverbatim}
     da bi ponovo je popunili.
-    
+
 \end{frame}
 
 \begin{frame}[fragile]{Problemi sa submodulima}
+    \includegraphics[scale=0.4]{sub_removing_sub3}
     
     Mijenjanje iz poddirektorija u submodule je također jedan od čestih problema.
     Mora se unstageat poddiretorij i tek onda se može dodati submodul.
